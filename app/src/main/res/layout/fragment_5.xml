@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:orientation="vertical" >
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimaryDark">
+
+    <TextView
+        android:text="ABOUT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:gravity="center_horizontal"
+        android:textSize="36sp"
+        android:textColor="@color/bright_foreground_inverse_material_light"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:text="Books"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:elevation="15dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:gravity="left|center_horizontal"
+            android:textColor="@color/bright_foreground_disabled_material_dark"
+            android:layout_gravity="left"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="171dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"
+            android:gravity="right"
+            android:textColor="@color/bright_foreground_disabled_material_dark"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>

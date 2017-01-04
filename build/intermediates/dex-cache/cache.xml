@@ -7,17 +7,8 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="cf0b1f8e8822b1283060d1894b1633ed1273499c">
+        sha1="5321f21df74415fa3e287b4cdcaed89045dd48d7">
         <dex dex="/Users/carlota/Desktop/Android-new/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_30572d91a02202922199242223c1e5948cf3fdda/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="a630a2710758cef61e8e7fa229e1aad0270cd442">
-        <dex dex="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_ae9a7ac9155c3adf343c11f9309c0b3876cfe077/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -27,6 +18,33 @@
         revision="22.0.1"
         sha1="8466a117caba80bd9ebd541c063b17c91e3fbf58">
         <dex dex="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_90dcbaeb5046321f952908457d89498613eeba86/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.2.1_95758769e80cfbda28ce8cf791d7173b83f168e0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/carlota/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.2.1_a2eb75ebcf4bb8f507d0357c92efb2a8210119fa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="a630a2710758cef61e8e7fa229e1aad0270cd442">
+        <dex dex="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_ae9a7ac9155c3adf343c11f9309c0b3876cfe077/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -57,20 +75,11 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.2.1_95758769e80cfbda28ce8cf791d7173b83f168e0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/carlota/Desktop/Android-new/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="e80aeff471b6ec673c94523760fb981874010a47">
+        sha1="11971d9ea2fdf45892680f3b059f199b0d6596ce">
         <dex dex="/Users/carlota/Desktop/Android-new/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_343a1862f67b3a5f5e872cb05be28176a99ab1ab/classes.dex" />
     </item>
     <item
@@ -90,15 +99,6 @@
         revision="22.0.1"
         sha1="f8efd0096475e0daf054267b61544e10dc776503">
         <dex dex="/Users/carlota/Desktop/Android-new/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-22.2.1_841cd7f425434501f99206f8fe650c29d21c1fe9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/carlota/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.2.1_a2eb75ebcf4bb8f507d0357c92efb2a8210119fa/classes.dex" />
     </item>
 
 </items>
