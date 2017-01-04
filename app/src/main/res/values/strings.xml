@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MyDatabaseExample</string>
+    <string name="update" />
+    <string name="cancel" />
+    <string name="Author">Author</string>
+    <string-array name="opinions">
+        <item>Very Bad</item>
+        <item>Bad</item>
+        <item>Regular</item>
+        <item>Great</item>
+        <item>Very Great</item>
+    </string-array>
+</resources>
