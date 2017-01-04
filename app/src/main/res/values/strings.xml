@@ -3,6 +3,11 @@
     <string name="update" />
     <string name="cancel" />
     <string name="Author">Author</string>
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">Close drawer</string>
+    <string name="app_not_available">App not available</string>
+    <string name="action_websearch">Web search</string>
+
     <string-array name="opinions">
         <item>Very Bad</item>
         <item>Bad</item>

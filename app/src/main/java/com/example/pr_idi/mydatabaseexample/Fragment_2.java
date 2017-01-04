@@ -6,6 +6,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -57,9 +59,6 @@ public class Fragment_2 extends Fragment {
 
 
 
-
-
-
         //Llistar tots els llibres inicialment
         Context ctx = getActivity();
         BookData bookData = new BookData(ctx);
@@ -100,6 +99,7 @@ public class Fragment_2 extends Fragment {
 
 
         final Button button = (Button) view.findViewById(R.id.searchbutton);
+
         //Programem el botó
         button.setOnClickListener(new View.OnClickListener() {
 
@@ -213,8 +213,10 @@ public class Fragment_2 extends Fragment {
                 };
 
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.CustomAlertDialog);
+
                 // Set the dialog title
+                //new ContextThemeWrapper(getActivity(), R.style.Theme_Dialog));*/
                 builder.setTitle("Personal Opinion");
                         //.setMessage("What opinion do you have about this book?")
 

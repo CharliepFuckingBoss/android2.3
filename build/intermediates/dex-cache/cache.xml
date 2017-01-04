@@ -3,48 +3,48 @@
 
     <item
         is-multidex="true"
-        jar="/Users/carlota/Downloads/MyBookDatabase 2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="4808a40d3b3585df5154283184c0c9bfca86b6ea">
-        <dex dex="/Users/carlota/Downloads/MyBookDatabase 2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_2785bfc2725b41118811d5bfab81f97531a638a2/classes.dex" />
+        sha1="a630a2710758cef61e8e7fa229e1aad0270cd442">
+        <dex dex="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_ae9a7ac9155c3adf343c11f9309c0b3876cfe077/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/carlota/Downloads/MyBookDatabase 2/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="437d5a16057880de86ec221aba56db3c2f0563f7">
-        <dex dex="/Users/carlota/Downloads/MyBookDatabase 2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_ff8339b92b064b10aaad47352e91229a01f5634f/classes.dex" />
+        sha1="8466a117caba80bd9ebd541c063b17c91e3fbf58">
+        <dex dex="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_90dcbaeb5046321f952908457d89498613eeba86/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/carlota/Downloads/MyBookDatabase 2/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="/Users/carlota/Downloads/MyBookDatabase 2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-22.2.1_d87978b2e9bc3e1d3b551f8f22475a5a30477de9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/carlota/Downloads/MyBookDatabase 2/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="/Users/carlota/Downloads/MyBookDatabase 2/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.2.1_bc38aa203a8f274b0f918df0a448f75ff5c64f1c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/carlota/Downloads/MyBookDatabase 2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
+        jar="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="/Users/carlota/Downloads/MyBookDatabase 2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-22.2.1_dd12be4337c3e98d9e0bbfe8876ea1a74f21ac7e/classes.dex" />
+        <dex dex="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-22.2.1_80388518bb1a6c78dc18a48850c865d628cc9572/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-22.2.1_19c8a96c1816c7fdcec5c19ccf86e523926a5adc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.2.1_95758769e80cfbda28ce8cf791d7173b83f168e0/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -53,7 +53,7 @@
         optimize="true"
         revision="22.0.1"
         sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="/Users/carlota/Downloads/MyBookDatabase 2/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.2.1_a2eb75ebcf4bb8f507d0357c92efb2a8210119fa/classes.dex" />
+        <dex dex="/Users/carlota/Desktop/char/FIB/3r/IDI/Pràctica/Android-2.0/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.2.1_a2eb75ebcf4bb8f507d0357c92efb2a8210119fa/classes.dex" />
     </item>
 
 </items>

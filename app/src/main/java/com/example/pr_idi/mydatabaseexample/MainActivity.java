@@ -1,117 +1,130 @@
-//main
 package com.example.pr_idi.mydatabaseexample;
 
-
-import java.util.List;
-import java.util.Random;
-
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.app.ListActivity;
-import android.content.DialogInterface;
+import android.app.SearchManager;
+import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
-import static android.R.attr.fragment;
+/**
+ * Created by carlota on 4/1/17.
+ */
 
-
-public class MainActivity extends Activity {
-
-    private String[] items = {
-            "Main",
-            "Search",
-            "akslfdj"
-    };
-
+public class MainActivity extends AppCompatActivity {
     private DrawerLayout myDrawerLayout;
     private ListView myDrawerList;
-    private int selectedPosition;
-    private BookData bookdata;
+    private ActionBarDrawerToggle myDrawerToggle;
+    private CharSequence myDrawerTitle;
+    private CharSequence myTitle;
+    private String[] items;
 
-
-    private void mostramiss() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        // Set the dialog title
-        builder.setTitle("Error");
-        //.setMessage("What opinion do you have about this book?")
-        builder.setMessage("This book already exists.");
-        builder.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                // User cancelled the dialog
-            }
-        });
-        AlertDialog alert = builder.create();
-        alert.show();
-    }
-
-    public void onCreate(Bundle savedInstanceState) {
-
-
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //requestWindowFeature(Window.FEATURE_ACTION_BAR);
+
         setContentView(R.layout.main);
 
-        bookdata = new BookData(this);
-        bookdata.open();
-        bookdata.deleteAllBooks();  //descomentar-ho per a eliminar tots els llibres de la BD
-        /*String[] newBook = new String[] { "Miguel Strogoff", "Jules Verne", "Ulysses", "James Joyce", "Don Quijote", "Miguel de Cervantes", "Metamorphosis", "Kafka" };
-        int nextInt = new Random().nextInt(4);
-        // save the new book to the database
-        bookdata.createBook(newBook[nextInt*2], newBook[nextInt*2 + 1]);*/
-
-
-
-        @SuppressWarnings("unchecked")
-        Book book = new Book();
-        book = bookdata.createBook("Harry Potter", "JK Rowling", 1997, "Bloomsbury", "Fantasia", "Very Great");
-        if (book == null) mostramiss();
-        book = bookdata.createBook("Paterson", "William Carlos Williams", 1946, "Christopher Beach", "Poesy", "Very Great");
-        if (book == null) mostramiss();
-        book = bookdata.createBook("Perico Palotes", "Jaimito", 1000, "Mari Carmen", "Infantil", "Very Bad");
-        if (book == null) mostramiss();
-        book = bookdata.createBook("El Medico", "Noah Gordon", 1986, "Readers", "Classic", "Regular");
-        if (book == null) mostramiss();
-
-
-
-        FragmentTransaction tx = getFragmentManager().beginTransaction();
-        tx.replace(R.id.content_frame, new Fragment_1());
-        tx.commit();
-
-
-/* Getting reference to the DrawerLayout */
+        myTitle = myDrawerTitle = getTitle();
+        items = getResources().getStringArray(R.array.items);
         myDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         myDrawerList = (ListView) findViewById(R.id.drawer_list);
 
-    /* Creating an ArrayAdapter to add items to mDrawerList */
-        ArrayAdapter adapter = new ArrayAdapter(this,
-                R.layout.drawer_list_item, items);
+        myDrawerList.setAdapter(new ArrayAdapter(this,
+                R.layout.drawer_list_item, items));
+        myDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
-/* Setting the adapter to myDrawerList */
-        myDrawerList.setAdapter(adapter);
 
-        // Setting item click listener to mDrawerList
-        myDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                selectedPosition = position;
-                //Replace fragment content
-                updateFragment();
-                myDrawerLayout.closeDrawer(myDrawerList);
+
+        myDrawerToggle = new ActionBarDrawerToggle(
+                this,                  /* host Activity */
+                myDrawerLayout,         /* DrawerLayout object */
+                R.string.drawer_open,  /* "open drawer" description for accessibility */
+                R.string.drawer_close  /* "close drawer" description for accessibility */
+        ) {
+            public void onDrawerClosed(View view) {
+                getSupportActionBar().setTitle(myTitle);
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
-        });
+
+            public void onDrawerOpened(View drawerView) {
+                getSupportActionBar().setTitle(myDrawerTitle);
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+        };
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        myDrawerLayout.setDrawerListener(myDrawerToggle);
+
+        if (savedInstanceState == null) {
+            selectItem(0);
+        }
     }
 
-    public void updateFragment() {
+
+    /* Called whenever we call invalidateOptionsMenu() */
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        // If the nav drawer is open, hide action items related to the content view
+        /*boolean drawerOpen = myDrawerLayout.isDrawerOpen(myDrawerList);
+        menu.findItem(R.string.action_websearch).setVisible(!drawerOpen);*/
+        return super.onPrepareOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // The action bar home/up action should open or close the drawer.
+        // ActionBarDrawerToggle will take care of this.
+        if (myDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        // Handle action buttons
+        switch(item.getItemId()) {
+            case R.string.action_websearch:
+                // create intent to perform web search for this planet
+                Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+                intent.putExtra(SearchManager.QUERY, getSupportActionBar().getTitle());
+                // catch event that there's no activity to handle intent
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(this, R.string.app_not_available, Toast.LENGTH_LONG).show();
+                }
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    /* The click listner for ListView in the navigation drawer */
+    private class DrawerItemClickListener implements ListView.OnItemClickListener {
+        @Override
+        public void onItemClick(AdapterView< ?> parent, View view, int position, long id) {
+            selectItem(position);
+            myDrawerLayout.closeDrawer(Gravity.LEFT);
+        }
+    }
+
+    private void selectItem(int position) {
         FragmentManager fragmentManager;
         FragmentTransaction fragmentTransaction;
-        switch (selectedPosition) {
+        switch (position) {
             case 0:
                 fragmentManager = getFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
@@ -126,33 +139,49 @@ public class MainActivity extends Activity {
                 fragmentTransaction.replace(R.id.content_frame, fragment2);
                 fragmentTransaction.commit();
                 break;
-            case 2:
+            case 3:
                 fragmentManager = getFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
-                Fragment_3 fragment3 = new Fragment_3();
+                Fragment_4 fragment3 = new Fragment_4();
                 fragmentTransaction.replace(R.id.content_frame, fragment3);
                 fragmentTransaction.commit();
                 break;
+            case 4:
+                fragmentManager = getFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                Fragment_5 fragment5 = new Fragment_5();
+                fragmentTransaction.replace(R.id.content_frame, fragment5);
+                fragmentTransaction.commit();
+                break;
         }
-
-
-
     }
-
-    // Life cycle methods. Check whether it is necessary to reimplement them
 
     @Override
-    protected void onResume() {
-        bookdata.open();
-        super.onResume();
+    public void setTitle(CharSequence title) {
+        myTitle = title;
+        getSupportActionBar().setTitle(myTitle);
     }
 
-    // Life cycle methods. Check whether it is necessary to reimplement them
+    /**
+     * When using the ActionBarDrawerToggle, you must call it during
+     * onPostCreate() and onConfigurationChanged()...
+     */
 
     @Override
-    protected void onPause() {
-        bookdata.close();
-        super.onPause();
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        // Sync the toggle state after onRestoreInstanceState has occurred.
+        myDrawerToggle.syncState();
     }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        // Pass any configuration change to the drawer toggls
+        myDrawerToggle.onConfigurationChanged(newConfig);
+    }
+
+
+
 
 }

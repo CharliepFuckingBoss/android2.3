@@ -12,33 +12,43 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
+            android:layout_marginRight="2dp"
             android:layout_height="wrap_content">
+
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
+                android:layout_marginLeft="10dp"
                 android:ems="10"
                 android:id="@+id/searchauthor"
                 android:textColor="?android:attr/colorControlNormal"
                 android:hint="@string/Author"
-            android:layout_weight="0.02" />
+            android:layout_weight="0.01" />
+
+            <!--<ImageButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:srcCompat="@android:drawable/btn_dialog"-->
+                <!--android:id="@+id/cleanbutton"-->
+                <!--android:layout_weight="0.02" />-->
 
             <Button
-                android:text="x"
-                android:layout_width="33dp"
-                android:layout_height="38dp"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
                 android:id="@+id/cleanbutton"
-                android:textSize="12sp"
-                android:onClick="onClick"/>
+                android:onClick="onClick"
+                android:layout_weight="0.00"
+                android:background="@android:drawable/ic_menu_close_clear_cancel" />
 
             <Button
-                android:text="Search"
-                android:layout_width="71dp"
-                android:layout_height="36dp"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
                 android:id="@+id/searchbutton"
                 android:textSize="12sp"
-                android:onClick="onClick"/>
+                android:onClick="onClick"
+                android:background="@android:drawable/ic_menu_search" />
 
         </LinearLayout>
 

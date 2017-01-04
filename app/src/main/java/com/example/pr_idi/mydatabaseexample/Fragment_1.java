@@ -132,7 +132,7 @@ public class Fragment_1 extends Fragment {
                 };
 
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.CustomAlertDialog);
                 // Set the dialog title
                 builder.setTitle("Personal Opinion");
                 //.setMessage("What opinion do you have about this book?")
